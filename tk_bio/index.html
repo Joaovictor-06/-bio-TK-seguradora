@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <title>TK seguradora | Links Oficiais & Contato</title>
+  <meta name="description" content="A melhor em seguros, planos saúde e odontológicos! Ipatinga-MG. Fale com Bremer, Jessica ou solicite seu orçamento.">
+  <meta name="theme-color" content="#060812">
+  
+  <!-- Open Graph / WhatsApp Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TK seguradora | Links Oficiais & Contato">
+  <meta property="og:description" content="A melhor em seguros, planos saúde e odontológicos! Ipatinga-MG.">
+  <meta property="og:image" content="assets/avatar.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/avatar.png">
+  <link rel="apple-touch-icon" href="assets/avatar.png">
+
+  <!-- Fonte moderna & limpa -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    :root {
+      --bg-main: #060812;
+      --bg-card: rgba(22, 27, 40, 0.75);
+      --bg-card-hover: rgba(32, 40, 60, 0.95);
+      --border-card: rgba(255, 255, 255, 0.08);
+      --border-card-hover: rgba(255, 255, 255, 0.2);
+      --accent-cyan: #00dfa2;
+      --accent-blue-glow: #1a4fd6;
+      --text-white: #ffffff;
+      --text-body: #cbd5e1;
+      --text-muted: #8292a8;
+      --arrow-color: #64748b;
+      --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-white);
+      font-family: var(--font-family);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 24px 16px 40px;
+      position: relative;
+      overflow-x: hidden;
+      /* Glow azul característico no topo */
+      background-image: 
+        radial-gradient(circle 380px at 50% 120px, rgba(26, 79, 214, 0.45), rgba(9, 26, 75, 0.16) 60%, transparent 100%),
+        radial-gradient(circle 260px at 50% 90%, rgba(0, 223, 162, 0.05), transparent 70%);
+      background-repeat: no-repeat;
+    }
+
+    /* Container Centralizado */
+    .container {
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1;
+    }
+
+    /* Botão compartilhar */
+    .top-bar {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 4px;
+    }
+
+    .share-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #cbd5e1;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .share-btn:hover {
+      background: rgba(255, 255, 255, 0.14);
+      color: #ffffff;
+      transform: scale(1.05);
+    }
+
+    /* Perfil */
+    .profile-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 24px;
+      width: 100%;
+    }
+
+    .avatar-wrapper {
+      position: relative;
+      margin-bottom: 12px;
+    }
+
+    .avatar-glow {
+      position: absolute;
+      inset: -5px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(0, 223, 162, 0.65), rgba(30, 98, 243, 0.75));
+      filter: blur(10px);
+      opacity: 0.6;
+      z-index: -1;
+      animation: pulse-glow 3.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulse-glow {
+      0% { opacity: 0.45; transform: scale(0.97); }
+      100% { opacity: 0.8; transform: scale(1.04); }
+    }
+
+    .avatar-img {
+      width: 86px;
+      height: 86px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      border: 2px solid rgba(0, 223, 162, 0.6);
+      background-color: #0b1528;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    }
+
+    .title-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 3px;
+    }
+
+    .profile-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: #ffffff;
+    }
+
+    /* Badge Verificado */
+    .verified-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      background: #00dfa2;
+      color: #060812;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 223, 162, 0.5);
+    }
+
+    .verified-badge svg {
+      width: 11px;
+      height: 11px;
+    }
+
+    .profile-handle {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 12px;
+      transition: color 0.2s;
+    }
+
+    .profile-handle:hover {
+      color: #ffffff;
+    }
+
+    /* Badges de Serviços */
+    .service-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4px 8px;
+      color: var(--accent-cyan);
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      line-height: 1.45;
+      max-width: 330px;
+      margin-bottom: 12px;
+      text-shadow: 0 0 14px rgba(0, 223, 162, 0.25);
+    }
+
+    .service-tags span {
+      white-space: nowrap;
+    }
+
+    /* Bio */
+    .profile-bio {
+      font-size: 0.88rem;
+      color: var(--text-body);
+      line-height: 1.45;
+      max-width: 290px;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+
+    /* Localização */
+    .profile-location {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .profile-location svg {
+      width: 13px;
+      height: 13px;
+      color: var(--text-muted);
+    }
+
+    /* Lista de Botões Principais */
+    .links-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    /* Cartão Estilo Pílula */
+    .link-card {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 54px;
+      padding: 12px 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 9999px;
+      color: var(--text-white);
+      text-decoration: none;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+    }
+
+    .link-card:hover, .link-card:active {
+      background: var(--bg-card-hover);
+      border-color: var(--border-card-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 16px rgba(26, 79, 214, 0.25);
+    }
+
+    .link-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .link-icon {
+      width: 19px;
+      height: 19px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      flex-shrink: 0;
+    }
+
+    .link-icon svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .link-label {
+      font-size: 0.93rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: #ffffff;
+    }
+
+    .link-arrow {
+      width: 15px;
+      height: 15px;
+      color: var(--arrow-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: transform 0.25s, color 0.25s;
+    }
+
+    .link-arrow svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .link-card:hover .link-arrow {
+      color: #ffffff;
+      transform: translate(2px, -2px);
+    }
+
+    /* Barra de Redes Sociais no Rodapé */
+    .socials-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .social-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #cbd5e1;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .social-btn:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-card-hover);
+      color: #ffffff;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    }
+
+    .social-btn svg {
+      width: 19px;
+      height: 19px;
+    }
+
+    /* Rodapé */
+    .footer {
+      text-align: center;
+      font-size: 0.73rem;
+      color: #556276;
+      line-height: 1.4;
+    }
+
+    /* Toast Flutuante */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #111827;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Barra superior com botão Compartilhar -->
+    <div class="top-bar">
+      <button class="share-btn" id="shareBtn" aria-label="Compartilhar Link da Bio" title="Compartilhar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="18" cy="5" r="3"></circle>
+          <circle cx="6" cy="12" r="3"></circle>
+          <circle cx="18" cy="19" r="3"></circle>
+          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Perfil da TK Corretora -->
+    <header class="profile-section">
+      <div class="avatar-wrapper">
+        <div class="avatar-glow"></div>
+        <img src="assets/avatar.png" alt="TK Corretora de Seguros" class="avatar-img" width="86" height="86">
+      </div>
+
+      <div class="title-row">
+        <h1 class="profile-title">TK seguradora</h1>
+        <span class="verified-badge" title="Verificado">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </span>
+      </div>
+
+      <a href="https://www.instagram.com/tk.corretora?rpxt=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="profile-handle">
+        @tk.corretora
+      </a>
+
+      <!-- Badges de Serviços -->
+      <div class="service-tags">
+        <span>➡️ CONSÓRCIOS</span>
+        <span>➡️ SEGUROS</span>
+        <span>➡️ PLANOS SAÚDE E ODONTOLÓGICOS</span>
+      </div>
+
+      <p class="profile-bio">
+        A melhor em seguros,<br>
+        planos saúde e<br>
+        odontológicos!
+      </p>
+
+      <div class="profile-location">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <span>Ipatinga-MG</span>
+      </div>
+    </header>
+
+    <!-- Lista de Botões de Ação -->
+    <main class="links-list">
+
+      <!-- Botão 1: Converse com Bremer -->
+      <a href="https://wa.me/553186584027" target="_blank" rel="noopener noreferrer" class="link-card">
+        <div class="link-left">
+          <span class="link-icon">
+            <!-- Ícone WhatsApp Oficial -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/>
+              <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/>
+            </svg>
+          </span>
+          <span class="link-label">Converse com Bremer</span>
+        </div>
+        <span class="link-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </span>
+      </a>
+
+      <!-- Botão 2: Converse com Jessica -->
+      <a href="https://wa.me/5531996582030" target="_blank" rel="noopener noreferrer" class="link-card">
+        <div class="link-left">
+          <span class="link-icon">
+            <!-- Ícone WhatsApp Oficial -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/>
+              <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/>
+            </svg>
+          </span>
+          <span class="link-label">Converse com Jessica</span>
+        </div>
+        <span class="link-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </span>
+      </a>
+
+      <!-- Botão 3: Solicite um orçamento -->
+      <a href="https://card.agger.com.br/v1/visita?card=cWwTgQOeZuC16Rv%2bEOzvDxLhjXmRhKRBHq4gZRNZqrs%3d" target="_blank" rel="noopener noreferrer" class="link-card">
+        <div class="link-left">
+          <span class="link-icon">
+            <!-- Link chain Icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+            </svg>
+          </span>
+          <span class="link-label">Solicite um orçamento</span>
+        </div>
+        <span class="link-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </span>
+      </a>
+
+      <!-- Botão 4: Nos avalie no Google -->
+      <a href="https://www.google.com/search?q=tk+corretora+ipatinga&aqs=chrome..69i57j0i22i30.4019j0j4&ie=UTF-8#lrd=0xb00047b9a0ff35:0xe8340fe483356eaa,1,,,&sv=CAESzQEKuQEStgEKd0FKaVQ0dEl6WXAtRWVjTnBMNWNFVnp4Yk1paDlHNzV3dEYwdXRhbklqZmpuTUtBNlA3M1doaUtoYjY3YU8zNmRkbEp5Q2V3c2dvVGJFTUI0MGhaNTNNR2ZyWDk2WlVDb2oyai1MQk1WVi1YcmhPUmx2YVpfUGtjEhdtUERIYXNMME02T28xc1FQcU4yRS1RbxoiQURzcjlmUW1DbHU5RUhWUHo2NVU0MEQzZW1fMDNCcDNvZxIEODA1MRoBMyoAMAA4AUAAGAAgtNek0QZKAhAB" target="_blank" rel="noopener noreferrer" class="link-card">
+        <div class="link-left">
+          <span class="link-icon">
+            <!-- Heart Icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </span>
+          <span class="link-label">Nos avalie no Google</span>
+        </div>
+        <span class="link-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </span>
+      </a>
+
+      <!-- Botão 5: Nosso site -->
+      <a href="https://tk-corretora-seguros.pages.dev/" target="_blank" rel="noopener noreferrer" class="link-card">
+        <div class="link-left">
+          <span class="link-icon">
+            <!-- Globe Icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </span>
+          <span class="link-label">Nosso site</span>
+        </div>
+        <span class="link-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </span>
+      </a>
+
+      <!-- Botão 6: Onde estamos -->
+      <a href="https://www.google.com/maps/dir/-19.4620691,-42.5696624/TK+Corretora+de+Seguros,+Planos+de+Sa%C3%BAde+e+Planos+Odontol%C3%B3gicos+.,+R.+Campinas,+188+-+Veneza,+Ipatinga+-+MG,+35164-254/@-19.4712331,-42.5909396,13z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0xb00047b9a0ff35:0xe8340fe483356eaa!2m2!1d-42.5296513!2d-19.4703454?entry=ttu&g_ep=EgoyMDI2MTAwNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="link-card">
+        <div class="link-left">
+          <span class="link-icon">
+            <!-- Map pin Icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </span>
+          <span class="link-label">Onde estamos</span>
+        </div>
+        <span class="link-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </span>
+      </a>
+
+    </main>
+
+    <!-- Linha de Redes Sociais no Rodapé -->
+    <footer class="socials-row">
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/tk.corretora?rpxt=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram" title="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/tkcorretora" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook" title="Facebook">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+        </svg>
+      </a>
+
+      <!-- WhatsApp Central -->
+      <a href="https://wa.me/5531986584027" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp" title="WhatsApp Oficial">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/>
+          <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/>
+        </svg>
+      </a>
+
+      <!-- Site Oficial -->
+      <a href="https://tk-corretora-seguros.pages.dev/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Website" title="Nosso Site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+      </a>
+    </footer>
+
+    <!-- Assinatura discreta -->
+    <div class="footer">
+      <p>© TK Corretora de Seguros • Ipatinga - MG</p>
+    </div>
+
+  </div>
+
+  <!-- Toast de Notificação -->
+  <div class="toast" id="toast">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00dfa2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span id="toastMsg">Link copiado com sucesso!</span>
+  </div>
+
+  <script>
+    // Função para compartilhar ou copiar link
+    const shareBtn = document.getElementById('shareBtn');
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toastMsg');
+
+    function showToast(msg) {
+      toastMsg.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2500);
+    }
+
+    if (shareBtn) {
+      shareBtn.addEventListener('click', async () => {
+        const shareData = {
+          title: 'TK seguradora - Link na Bio',
+          text: 'Conheça a TK Corretora de Seguros, fale com nossos corretores e solicite um orçamento!',
+          url: window.location.href
+        };
+
+        if (navigator.share) {
+          try {
+            await navigator.share(shareData);
+          } catch (err) {
+            // Cancelado pelo usuário
+          }
+        } else {
+          try {
+            await navigator.clipboard.writeText(window.location.href);
+            showToast('Link copiado para a área de transferência!');
+          } catch (e) {
+            showToast('Pressione Ctrl+C para copiar');
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>
