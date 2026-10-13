@@ -6,7 +6,7 @@
   
   <title>TK seguradora | Links Oficiais & Contato</title>
   <meta name="description" content="A melhor em seguros, planos saúde e odontológicos! Ipatinga-MG. Fale com Bremer, Jessica ou solicite seu orçamento.">
-  <meta name="theme-color" content="#060812">
+  <meta name="theme-color" content="#04050a">
   
   <!-- Open Graph / WhatsApp Preview -->
   <meta property="og:type" content="website">
@@ -33,13 +33,12 @@
     }
 
     :root {
-      --bg-main: #060812;
-      --bg-card: rgba(22, 27, 40, 0.75);
-      --bg-card-hover: rgba(32, 40, 60, 0.95);
-      --border-card: rgba(255, 255, 255, 0.08);
-      --border-card-hover: rgba(255, 255, 255, 0.2);
+      --bg-main: #04050a;
+      --bg-card: rgba(24, 27, 36, 0.68);
+      --bg-card-hover: rgba(35, 40, 56, 0.88);
+      --border-card: rgba(255, 255, 255, 0.11);
+      --border-card-hover: rgba(255, 255, 255, 0.25);
       --accent-cyan: #00dfa2;
-      --accent-blue-glow: #1a4fd6;
       --text-white: #ffffff;
       --text-body: #cbd5e1;
       --text-muted: #8292a8;
@@ -55,123 +54,108 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      padding: 24px 16px 40px;
+      padding: 28px 18px 48px;
       position: relative;
       overflow-x: hidden;
-      /* Glow azul característico no topo */
+      
+      /* Iluminação ambiente com dois focos azuis profundos idênticos ao Valyos:
+         1. No topo esquerdo atrás da foto de perfil
+         2. Na base central brilhando por trás dos botões inferiores */
       background-image: 
-        radial-gradient(circle 380px at 50% 120px, rgba(26, 79, 214, 0.45), rgba(9, 26, 75, 0.16) 60%, transparent 100%),
-        radial-gradient(circle 260px at 50% 90%, rgba(0, 223, 162, 0.05), transparent 70%);
+        radial-gradient(circle 380px at 16% 14%, rgba(22, 60, 230, 0.55), rgba(8, 20, 100, 0.2) 55%, transparent 80%),
+        radial-gradient(circle 440px at 50% 86%, rgba(20, 58, 235, 0.52), rgba(8, 22, 110, 0.18) 60%, transparent 80%);
+      background-attachment: fixed;
       background-repeat: no-repeat;
     }
 
-    /* Container Centralizado */
+    /* Container Centralizado para Dispositivos Móveis */
     .container {
       width: 100%;
-      max-width: 400px;
+      max-width: 410px;
       display: flex;
       flex-direction: column;
-      align-items: center;
       z-index: 1;
     }
 
-    /* Botão compartilhar */
-    .top-bar {
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-      margin-bottom: 4px;
-    }
-
-    .share-btn {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      color: #cbd5e1;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      backdrop-filter: blur(10px);
-    }
-
-    .share-btn:hover {
-      background: rgba(255, 255, 255, 0.14);
-      color: #ffffff;
-      transform: scale(1.05);
-    }
-
-    /* Perfil */
+    /* Seção do Perfil: Formato Horizontal (Avatar na esquerda + Informações na direita) */
     .profile-section {
+      width: 100%;
       display: flex;
       flex-direction: column;
+      margin-bottom: 22px;
+      margin-top: 8px;
+    }
+
+    .profile-header-row {
+      display: flex;
       align-items: center;
-      text-align: center;
-      margin-bottom: 24px;
+      gap: 18px;
       width: 100%;
     }
 
+    /* Foto de Perfil com borda menta e glow */
     .avatar-wrapper {
       position: relative;
-      margin-bottom: 12px;
+      flex-shrink: 0;
     }
 
     .avatar-glow {
       position: absolute;
-      inset: -5px;
+      inset: -6px;
       border-radius: 50%;
-      background: linear-gradient(135deg, rgba(0, 223, 162, 0.65), rgba(30, 98, 243, 0.75));
-      filter: blur(10px);
-      opacity: 0.6;
+      background: radial-gradient(circle, rgba(0, 223, 162, 0.7), rgba(24, 70, 240, 0.8));
+      filter: blur(12px);
+      opacity: 0.55;
       z-index: -1;
-      animation: pulse-glow 3.5s ease-in-out infinite alternate;
-    }
-
-    @keyframes pulse-glow {
-      0% { opacity: 0.45; transform: scale(0.97); }
-      100% { opacity: 0.8; transform: scale(1.04); }
     }
 
     .avatar-img {
-      width: 86px;
-      height: 86px;
+      width: 108px;
+      height: 108px;
       border-radius: 50%;
       object-fit: cover;
       display: block;
-      border: 2px solid rgba(0, 223, 162, 0.6);
-      background-color: #0b1528;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+      border: 2.5px solid rgba(0, 223, 162, 0.75);
+      background-color: #a8e0e3;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.55);
+    }
+
+    /* Coluna de Texto ao lado do Avatar */
+    .profile-info-col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex: 1;
+      min-width: 0;
     }
 
     .title-row {
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 6px;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
 
     .profile-title {
-      font-size: 1.35rem;
+      font-size: 1.42rem;
       font-weight: 700;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.015em;
       color: #ffffff;
+      white-space: nowrap;
     }
 
-    /* Badge Verificado */
+    /* Selo de Verificado */
     .verified-badge {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 18px;
-      height: 18px;
+      width: 19px;
+      height: 19px;
       background: #00dfa2;
-      color: #060812;
+      color: #04050a;
       border-radius: 50%;
-      box-shadow: 0 0 10px rgba(0, 223, 162, 0.5);
+      box-shadow: 0 0 10px rgba(0, 223, 162, 0.55);
+      flex-shrink: 0;
     }
 
     .verified-badge svg {
@@ -180,11 +164,11 @@
     }
 
     .profile-handle {
-      font-size: 0.86rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
       text-decoration: none;
       font-weight: 500;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
       transition: color 0.2s;
     }
 
@@ -192,54 +176,58 @@
       color: #ffffff;
     }
 
-    /* Badges de Serviços */
+    /* Tags em Destaque (Verde menta / Turquesa vibrante) */
     .service-tags {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 4px 8px;
+      flex-direction: column;
+      gap: 2px;
       color: var(--accent-cyan);
       font-size: 0.74rem;
       font-weight: 800;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.035em;
       text-transform: uppercase;
-      line-height: 1.45;
-      max-width: 330px;
-      margin-bottom: 12px;
+      line-height: 1.35;
       text-shadow: 0 0 14px rgba(0, 223, 162, 0.25);
     }
 
-    .service-tags span {
+    .service-tags div {
       white-space: nowrap;
     }
 
-    /* Bio */
-    .profile-bio {
-      font-size: 0.88rem;
-      color: var(--text-body);
-      line-height: 1.45;
-      max-width: 290px;
-      font-weight: 400;
-      margin-bottom: 8px;
+    /* Descrição e Localização abaixo do Avatar */
+    .profile-bio-block {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 14px;
     }
 
-    /* Localização */
+    .profile-bio {
+      font-size: 0.94rem;
+      color: var(--text-body);
+      line-height: 1.45;
+      font-weight: 400;
+      text-align: left;
+    }
+
     .profile-location {
       display: inline-flex;
       align-items: center;
       gap: 5px;
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       color: var(--text-muted);
       font-weight: 500;
+      margin-top: 8px;
     }
 
     .profile-location svg {
-      width: 13px;
-      height: 13px;
+      width: 14px;
+      height: 14px;
       color: var(--text-muted);
     }
 
-    /* Lista de Botões Principais */
+    /* Lista de Botões de Ação */
     .links-list {
       width: 100%;
       display: flex;
@@ -248,22 +236,23 @@
       margin-bottom: 28px;
     }
 
-    /* Cartão Estilo Pílula */
+    /* Cartão Estilo Pílula Translúcida (Dark Glassmorphism) */
     .link-card {
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      min-height: 54px;
-      padding: 12px 24px;
+      height: 64px;
+      padding: 0 26px;
       background: var(--bg-card);
       border: 1px solid var(--border-card);
       border-radius: 9999px;
       color: var(--text-white);
       text-decoration: none;
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-      backdrop-filter: blur(12px);
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.32);
       cursor: pointer;
     }
 
@@ -271,18 +260,18 @@
       background: var(--bg-card-hover);
       border-color: var(--border-card-hover);
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 16px rgba(26, 79, 214, 0.25);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
     }
 
     .link-left {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 16px;
     }
 
     .link-icon {
-      width: 19px;
-      height: 19px;
+      width: 21px;
+      height: 21px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -296,15 +285,15 @@
     }
 
     .link-label {
-      font-size: 0.93rem;
+      font-size: 0.98rem;
       font-weight: 600;
       letter-spacing: -0.01em;
       color: #ffffff;
     }
 
     .link-arrow {
-      width: 15px;
-      height: 15px;
+      width: 16px;
+      height: 16px;
       color: var(--arrow-color);
       display: flex;
       align-items: center;
@@ -344,7 +333,8 @@
       color: #cbd5e1;
       text-decoration: none;
       transition: all 0.25s ease;
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
@@ -368,92 +358,58 @@
       color: #556276;
       line-height: 1.4;
     }
-
-    /* Toast Flutuante */
-    .toast {
-      position: fixed;
-      bottom: 24px;
-      left: 50%;
-      transform: translateX(-50%) translateY(100px);
-      background: #111827;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      color: #ffffff;
-      padding: 10px 20px;
-      border-radius: 9999px;
-      font-size: 0.82rem;
-      font-weight: 500;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s;
-      opacity: 0;
-      pointer-events: none;
-      z-index: 100;
-    }
-
-    .toast.show {
-      transform: translateX(-50%) translateY(0);
-      opacity: 1;
-    }
   </style>
 </head>
 <body>
 
   <div class="container">
-    
-    <!-- Barra superior com botão Compartilhar -->
-    <div class="top-bar">
-      <button class="share-btn" id="shareBtn" aria-label="Compartilhar Link da Bio" title="Compartilhar">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="18" cy="5" r="3"></circle>
-          <circle cx="6" cy="12" r="3"></circle>
-          <circle cx="18" cy="19" r="3"></circle>
-          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-        </svg>
-      </button>
-    </div>
 
-    <!-- Perfil da TK Corretora -->
+    <!-- Seção do Perfil (Layout Horizontal Fiel ao Valyos) -->
     <header class="profile-section">
-      <div class="avatar-wrapper">
-        <div class="avatar-glow"></div>
-        <img src="assets/avatar.png" alt="TK Corretora de Seguros" class="avatar-img" width="86" height="86">
+      <div class="profile-header-row">
+        <!-- Foto com borda verde menta e glow azul -->
+        <div class="avatar-wrapper">
+          <div class="avatar-glow"></div>
+          <img src="assets/avatar.png" alt="TK Corretora de Seguros" class="avatar-img" width="108" height="108">
+        </div>
+
+        <!-- Dados e Tags ao lado da foto -->
+        <div class="profile-info-col">
+          <div class="title-row">
+            <h1 class="profile-title">TK seguradora</h1>
+            <span class="verified-badge" title="Verificado">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+          </div>
+
+          <a href="https://www.instagram.com/tk.corretora?rpxt=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="profile-handle">
+            @tk.corretora
+          </a>
+
+          <!-- Badges de Serviços -->
+          <div class="service-tags">
+            <div>➡️ CONSÓRCIOS ➡️</div>
+            <div>SEGUROS ➡️ PLANOS</div>
+            <div>SAÚDE E ODONTOLÓGICOS</div>
+          </div>
+        </div>
       </div>
 
-      <div class="title-row">
-        <h1 class="profile-title">TK seguradora</h1>
-        <span class="verified-badge" title="Verificado">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="20 6 9 17 4 12"></polyline>
+      <!-- Bio e Localização logo abaixo -->
+      <div class="profile-bio-block">
+        <p class="profile-bio">
+          A melhor em seguros, planos saúde e odontológicos!
+        </p>
+
+        <div class="profile-location">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
           </svg>
-        </span>
-      </div>
-
-      <a href="https://www.instagram.com/tk.corretora?rpxt=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="profile-handle">
-        @tk.corretora
-      </a>
-
-      <!-- Badges de Serviços -->
-      <div class="service-tags">
-        <span>➡️ CONSÓRCIOS</span>
-        <span>➡️ SEGUROS</span>
-        <span>➡️ PLANOS SAÚDE E ODONTOLÓGICOS</span>
-      </div>
-
-      <p class="profile-bio">
-        A melhor em seguros,<br>
-        planos saúde e<br>
-        odontológicos!
-      </p>
-
-      <div class="profile-location">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-          <circle cx="12" cy="10" r="3"></circle>
-        </svg>
-        <span>Ipatinga-MG</span>
+          <span>Ipatinga-MG</span>
+        </div>
       </div>
     </header>
 
@@ -464,7 +420,7 @@
       <a href="https://wa.me/553186584027" target="_blank" rel="noopener noreferrer" class="link-card">
         <div class="link-left">
           <span class="link-icon">
-            <!-- Ícone WhatsApp Oficial -->
+            <!-- Ícone WhatsApp -->
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/>
               <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/>
@@ -484,7 +440,7 @@
       <a href="https://wa.me/5531996582030" target="_blank" rel="noopener noreferrer" class="link-card">
         <div class="link-left">
           <span class="link-icon">
-            <!-- Ícone WhatsApp Oficial -->
+            <!-- Ícone WhatsApp -->
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/>
               <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/>
@@ -504,7 +460,7 @@
       <a href="https://card.agger.com.br/v1/visita?card=cWwTgQOeZuC16Rv%2bEOzvDxLhjXmRhKRBHq4gZRNZqrs%3d" target="_blank" rel="noopener noreferrer" class="link-card">
         <div class="link-left">
           <span class="link-icon">
-            <!-- Link chain Icon -->
+            <!-- Link Chain -->
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
               <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
               <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
@@ -564,7 +520,7 @@
       <a href="https://www.google.com/maps/dir/-19.4620691,-42.5696624/TK+Corretora+de+Seguros,+Planos+de+Sa%C3%BAde+e+Planos+Odontol%C3%B3gicos+.,+R.+Campinas,+188+-+Veneza,+Ipatinga+-+MG,+35164-254/@-19.4712331,-42.5909396,13z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0xb00047b9a0ff35:0xe8340fe483356eaa!2m2!1d-42.5296513!2d-19.4703454?entry=ttu&g_ep=EgoyMDI2MTAwNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="link-card">
         <div class="link-left">
           <span class="link-icon">
-            <!-- Map pin Icon -->
+            <!-- Map Pin -->
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
               <circle cx="12" cy="10" r="3"></circle>
@@ -625,52 +581,5 @@
 
   </div>
 
-  <!-- Toast de Notificação -->
-  <div class="toast" id="toast">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00dfa2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="20 6 9 17 4 12"></polyline>
-    </svg>
-    <span id="toastMsg">Link copiado com sucesso!</span>
-  </div>
-
-  <script>
-    // Função para compartilhar ou copiar link
-    const shareBtn = document.getElementById('shareBtn');
-    const toast = document.getElementById('toast');
-    const toastMsg = document.getElementById('toastMsg');
-
-    function showToast(msg) {
-      toastMsg.textContent = msg;
-      toast.classList.add('show');
-      setTimeout(() => {
-        toast.classList.remove('show');
-      }, 2500);
-    }
-
-    if (shareBtn) {
-      shareBtn.addEventListener('click', async () => {
-        const shareData = {
-          title: 'TK seguradora - Link na Bio',
-          text: 'Conheça a TK Corretora de Seguros, fale com nossos corretores e solicite um orçamento!',
-          url: window.location.href
-        };
-
-        if (navigator.share) {
-          try {
-            await navigator.share(shareData);
-          } catch (err) {
-            // Cancelado pelo usuário
-          }
-        } else {
-          try {
-            await navigator.clipboard.writeText(window.location.href);
-            showToast('Link copiado para a área de transferência!');
-          } catch (e) {
-            showToast('Pressione Ctrl+C para copiar');
-          }
-        }
-      });
-    }
-  </script>
 </body>
 </html>
